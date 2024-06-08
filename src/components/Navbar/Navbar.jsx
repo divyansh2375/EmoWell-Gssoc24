@@ -124,15 +124,19 @@ const Navbar = () => {
                About
               </NavLinks>
             </Navitem>
+            <Navitem className="custom">
+              <NavLinks onClick={()=> scrollToSection('featureSection')}>
+                Features
+              </NavLinks>
+            </Navitem>
             <Navitem>
               <NavLinks to="/contact" onClick={handleLogoClick}>
                Contact
               </NavLinks>
             </Navitem>
-
-            <Navitem className="custom">
-              <NavLinks onClick={()=> scrollToSection('featureSection')}>
-                Features
+            <Navitem>
+              <NavLinks to="/review" onClick={handleLogoClick}>
+               Review
               </NavLinks>
             </Navitem>
             {isAuthenticated ? (
@@ -157,7 +161,7 @@ const Navbar = () => {
              </li>
               ):(
             <li>
-              <Button onClick={() => loginWithRedirect()}>
+              <Button onClick={() => loginWithRedirect()} style={{border:'1px solid rgb(48,175,91)'}}>
               Register</Button>
             </li>
             )}
