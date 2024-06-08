@@ -13,6 +13,8 @@ import {
   Dropdown,
   Dropdowncontent,ButtonDropdown,
 } from "./NavbarElements";
+// import { useTheme } from ".../src/theme-context.jsx"
+import { useTheme } from "../../theme-context";
 
 // import Dropdown from 'rsuite/Dropdown'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -109,6 +111,9 @@ const Navbar = () => {
             {isOpen ? <FaTimes /> : <FaBars />} {/* Close icon when open */}
           </MobileIcon>
           <NavMenu isOpen={isOpen}>
+          
+
+
             <Navitem>
               <NavLinks to="/" onClick={handleLogoClick}>
                 Home

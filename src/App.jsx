@@ -9,11 +9,16 @@ import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 // import Features from './components/Features'
 
+import { ThemeProvider } from "./theme-context" 
+
+'styled-components';
 function App() {
 
 
   return (
     <>
+    <ThemeProvider>
+
   <Router>
     <Routes>
     <Route path="/" element={<Home />} />
@@ -26,6 +31,7 @@ function App() {
     </Router>
   
     {/* <Features/> */}
+    </ThemeProvider>
     </>
   )
 }
